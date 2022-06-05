@@ -1,0 +1,7 @@
+{
+  "readme-iopa-mount": "@iopa/mount",
+  "readme-iopa-router": "@iopa/router",
+  "readme-iopa-static": "@iopa/static",
+  "library": "Community",
+  "legacy": "Legacy"
+}

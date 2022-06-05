@@ -1,9 +1,9 @@
-[![IOPA](http://iopa.io/iopa.png)](http://iopa.io)
+[![IOPA](https://iopa.io/iopa.png)](https://iopa.io)
 
 ## This Repository
 
-This is the official repository of the IOPA (Internet of Protocols Alliance) Specification and is the 
-source of all the documentation at [iopa.io](http://iopa.io).
+This is the official repository of the IOPA (Internet Open Protocols Alliance) Specification and is the 
+source of all the documentation at [iopa.io](https://iopa.io).
 
 ## About
 
@@ -12,33 +12,45 @@ IOPA defines a platform-independent, protocol-independent standard framework for
 ## Specification
 [IOPA Specification](./docs/Specification.md)  (this repository)
 
-We recommend reviewing the reference implementation, [iopa-io/iopa](http://github.com/iopa-io/iopa), in conjunction with this IOPA specification, so that you get a sense for the implementation possibilities.
+We recommend reviewing the reference implementation, [iopa-io/iopa](https://github.com/iopa-io/iopa), in conjunction with this IOPA specification, so that you get a sense for the implementation possibilities.
 
 ## To Re-Build the Documentation
 
-This repository uses [hexo](http://hexo.io) to generate the documentation
+This repository uses [Next.JS](https://nextjs.org/) to generate the documentation, using the [Nextra](https://nextra.vercel.app/) plugin and themes.
 
 Install dependencies:
 
 ``` bash
 $ git clone https://github.com/iopa-io/iopa-docs.git
 $ cd iopa-docs
-$ brew install homebrew/science/vips --with-webp --with-graphicsmagick
-$ npm install
+$ yarn
 ```
 
 Generate:
 
 ``` bash
-$ npm run clean
-$ npm run build
+$ yarn build
 ```
 
 Run server:
 
 ``` bash
-$ hexo server
+$ yarn start
 ```
+
+## Development serer
+
+Generate:
+
+``` bash
+$ yarn dev
+```
+
+
+## Release Notes
+
+4.0 Updated documentation site builder from Hexo to Next.JS with Nextra by Vercel.
+
 
 ## License
 

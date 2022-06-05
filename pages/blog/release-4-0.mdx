@@ -1,0 +1,43 @@
+---
+title: "IOPA Specification 4.0 Released"
+date: 2022/06/01
+description: 'IOPA 4.0 is the current stable version of the Internet of Protocols Alliance specification'
+tag: release
+---
+
+import Authors from '@/components/Authors'
+
+# IOPA Specification 4.0 Latest Released
+
+<div className="text-sm mt-2 text-center text-gray-500 dark:text-gray-400">
+  June 1, 2022
+</div>
+
+<Authors authors={['guybarnard']} />
+
+<div className="flex justify-center mt-8">
+
+[Repository][repo] · [Specification][spec] · [Developer Tool][debugger]
+
+</div>
+
+IOPA 4.0 is the fist stable version of the Internet of Protocols Alliance specification.
+
+## Optimized for Edge environments
+
+It has been validated against HTTP protocols and runs in NodeJS, Cloudflare, Deno and Browser environments.
+
+## Web standards
+
+It adopts web standards such as WHATWG Fetch Request/Response Context Items for body parsing, URLs, Header fields etc.
+
+## Development Tools 
+
+It also adds a brand new inline debugger for development purposes that allows real-time inspection of the IOPA Context
+ Record, logging, and other instrumentation.  It is based on the Flipper tool by Meta Platforms, Inc. used for 
+ debugging mobile devices but updated to run in any web browser and to hook right into the IOPA App pipeline.
+
+[twitter]: https://twitter.com/iopa_io
+[repo]: https://github.com/iopa-io/iopa
+[spec]: /specifications/core/iopa
+[debugger]: https://www.npmjs.com/package/@iopa/flipper

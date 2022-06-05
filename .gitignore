@@ -1,14 +1,15 @@
 .DS_Store
-.idea/
-node_modules/
-*.log
-db.json
-public/
-.deploy*/
-pids
-logs
-results
-testresults
-tmp
+.next
+node_modules
+yarn-error.log
+.pnpm-debug.log
+dist
+*/**/.turbo
+# Theme styles
+packages/nextra-theme-*/style.css
 
-npm-debug.log
+# Stork related
+*/**/public/*.st
+*/**/public/*.toml
+
+.vercel

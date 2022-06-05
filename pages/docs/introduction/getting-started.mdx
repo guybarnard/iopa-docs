@@ -1,0 +1,62 @@
+---
+title: "Getting Started with IOPA"
+description: "This page will help you get started with IOPA. You'll be up and running in a jiffy!"
+---
+import { Tabs, Tab } from '@/components/Tabs.tsx'
+
+# Getting Started with IOPA
+> This page will help you get started with IOPA. You'll be up and running in a jiffy!
+
+## Install
+
+First add `iopa` to your Node.js project
+
+
+<Tabs items={['npm', 'yarn']}>
+  <Tab>
+```shell
+  npm install iopa @iopa/types --save
+```
+  </Tab>
+  <Tab>
+    ```bash
+    yarn add iopa @iopa/types
+    ```
+  </Tab>
+</Tabs>
+
+## Create App
+
+Create a simple Hello World application
+
+
+```ts
+import type { IContextCore, Next, IRouterApp } from '@iopa/types'
+import { RouterApp } from 'iopa'
+import RouterMiddleware from '@iopa/router'
+import { listen } from '@iopa/edge-nodejs'
+
+const app: IRouterApp = new RouterApp()
+
+app.use(RouterMiddleware, 'Router Middleware')
+
+/* Middleware that processes every request; we could have also used `app.use` */
+app.all('*', async (context: IContextCore, next: Next) => {
+  context.log.info(`Processing started for ${context.get('iopa.Method')} request`)
+  return next()
+})
+
+app.get('/api/:version', async (context: IContextCore) => {
+   // respond as text/plain with default response code of 200
+  return 'Hello World' 
+})
+
+app.build()
+
+async function startServer(): Promise<void> {
+  await listen(app)
+}
+
+void startServer()
+
+```

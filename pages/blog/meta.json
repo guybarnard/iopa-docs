@@ -1,0 +1,16 @@
+{
+  "*": {
+    "//": "Hide all the links from the sidebar or navbar, and disable ToC and Sidebar for these pages.",
+    "hidden": true,
+    "theme": {
+      "toc": false,
+      "sidebar": false,
+      "typesetting": "article"
+    }
+  },
+  "release-4-0": "IOPA Specification 4.0 Latest Released",
+  "release-3-0": "IOPA Specification 3.0 Experimental Released",
+  "release-2-0": "IOPA Specification 2.0 TypeScript Released",
+  "release-1-4": "IOPA Specification 1.4 LTS Released",
+  "release-1-1": "IOPA Specification 1.1 Released"
+}

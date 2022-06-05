@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+}
+
+body {
+  --nextra-primary-hue: 15deg;
+}
+
+.dark body {
+}
+
+sub > p {
+  @apply text-xl text-gray-500;
+}
+
+.logo, .dark .logo {
+  background-image: url('/logo-light.svg');
+  @apply bg-auto bg-no-repeat h-14 w-64;
+}
+
+.dark .logo {
+  background-image: url('/logo-dark.svg');
+}
+
+ol > li > ol,
+ul > li > ol,
+ol > li > ul,
+ul > li > ul {
+  @apply my-0;
+}
+
+main > ul > li:last-child {
+  /* @apply mb-2 bg-blue-100; */
+}
+
+.tooltip {
+  @apply invisible absolute;
+}
+
+.has-tooltip:hover .tooltip {
+  @apply visible z-50;
+}
+

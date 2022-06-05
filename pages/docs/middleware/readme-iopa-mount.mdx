@@ -1,0 +1,40 @@
+[![IOPA](/iopa.png)](https://iopa.io)
+# @iopa/mount
+
+[![NPM](https://nodei.co/npm/iopa-mount.png?downloads=true)](https://nodei.co/npm/iopa/)
+
+## About
+
+Mount other IOPA applications or middleware to a given pathname
+
+## Usage
+
+```js
+npm install iopa-mount --save
+```
+
+```js
+app.mount(path, function(context){});
+```
+
+### Example
+
+```js
+const iopa = require('iopa'),
+  iopaMount = require('./index'),
+  IOPA = iopa.constants.IOPA
+ 
+var app = new iopa.App();
+
+app.mount("/test", function (context, next) {
+  context.log.info("HELLO WORLD");
+   return Promise.resolve(null);
+});
+
+var demo = app.build();
+
+var context = new iopa.Factory().createRequest("http://localhost/test/hello", "GET");
+demo(context);
+
+iopaFactory.dispose(context);
+```
